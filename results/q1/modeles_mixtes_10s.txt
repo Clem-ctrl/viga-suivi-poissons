@@ -1,0 +1,192 @@
+Modele : indicateur ~ groupe * temps_h + (1 | extrait) + (1 | extrait:piste), tranches de 10 s.
+Les p-values sont OPTIMISTES : plusieurs pistes peuvent appartenir au meme poisson,
+et l'identite des poissons (10 sains, 10 malades) ne peut pas etre modelisee.
+
+===== Vitesse moyenne (log, 11704 tranches) =====
+                          Mixed Linear Model Regression Results
+==========================================================================================
+Model:                       MixedLM            Dependent Variable:            vitesse_moy
+No. Observations:            11704              Method:                        REML       
+No. Groups:                  45                 Scale:                         0.2943     
+Min. group size:             177                Log-Likelihood:                -10735.7331
+Max. group size:             342                Converged:                     Yes        
+Mean group size:             260.1                                                        
+------------------------------------------------------------------------------------------
+                                               Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+------------------------------------------------------------------------------------------
+Intercept                                      -1.234    0.098 -12.610 0.000 -1.426 -1.042
+C(groupe, Treatment('sain'))[T.malade]         -1.452    0.069 -20.932 0.000 -1.588 -1.316
+temps_h                                         0.082    0.023   3.563 0.000  0.037  0.128
+C(groupe, Treatment('sain'))[T.malade]:temps_h  0.025    0.022   1.153 0.249 -0.018  0.068
+Group Var                                       0.092    0.042                            
+piste Var                                       0.294    0.030                            
+==========================================================================================
+
+
+===== Variabilite de la vitesse (CV) (11704 tranches) =====
+                          Mixed Linear Model Regression Results
+=========================================================================================
+Model:                       MixedLM            Dependent Variable:            vitesse_cv
+No. Observations:            11704              Method:                        REML      
+No. Groups:                  45                 Scale:                         0.0344    
+Min. group size:             177                Log-Likelihood:                2360.9852 
+Max. group size:             342                Converged:                     Yes       
+Mean group size:             260.1                                                       
+-----------------------------------------------------------------------------------------
+                                               Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+-----------------------------------------------------------------------------------------
+Intercept                                       0.602    0.014 43.595 0.000  0.575  0.629
+C(groupe, Treatment('sain'))[T.malade]          0.183    0.014 12.640 0.000  0.154  0.211
+temps_h                                        -0.011    0.003 -3.343 0.001 -0.017 -0.005
+C(groupe, Treatment('sain'))[T.malade]:temps_h -0.008    0.005 -1.733 0.083 -0.017  0.001
+Group Var                                       0.001    0.002                           
+piste Var                                       0.010    0.004                           
+=========================================================================================
+
+
+===== Acceleration moyenne (log, 11704 tranches) =====
+                          Mixed Linear Model Regression Results
+==========================================================================================
+Model:                      MixedLM          Dependent Variable:          acceleration_moy
+No. Observations:           11704            Method:                      REML            
+No. Groups:                 45               Scale:                       0.1564          
+Min. group size:            177              Log-Likelihood:              -7020.3381      
+Max. group size:            342              Converged:                   Yes             
+Mean group size:            260.1                                                         
+------------------------------------------------------------------------------------------
+                                               Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+------------------------------------------------------------------------------------------
+Intercept                                       0.862    0.067  12.884 0.000  0.731  0.993
+C(groupe, Treatment('sain'))[T.malade]         -0.834    0.050 -16.706 0.000 -0.932 -0.736
+temps_h                                         0.055    0.016   3.467 0.001  0.024  0.086
+C(groupe, Treatment('sain'))[T.malade]:temps_h  0.058    0.016   3.677 0.000  0.027  0.089
+Group Var                                       0.042    0.027                            
+piste Var                                       0.152    0.022                            
+==========================================================================================
+
+
+===== Vitesse angulaire (log, 11704 tranches) =====
+                          Mixed Linear Model Regression Results
+==========================================================================================
+Model:                        MixedLM           Dependent Variable:           angle_virage
+No. Observations:             11704             Method:                       REML        
+No. Groups:                   45                Scale:                        0.2600      
+Min. group size:              177               Log-Likelihood:               -9981.0849  
+Max. group size:              342               Converged:                    Yes         
+Mean group size:              260.1                                                       
+------------------------------------------------------------------------------------------
+                                               Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+------------------------------------------------------------------------------------------
+Intercept                                       2.858    0.087  32.958 0.000  2.688  3.028
+C(groupe, Treatment('sain'))[T.malade]         -1.111    0.064 -17.471 0.000 -1.236 -0.986
+temps_h                                         0.071    0.020   3.443 0.001  0.030  0.111
+C(groupe, Treatment('sain'))[T.malade]:temps_h  0.027    0.020   1.348 0.178 -0.012  0.067
+Group Var                                       0.072    0.035                            
+piste Var                                       0.245    0.027                            
+==========================================================================================
+
+
+===== Courbure du corps (11704 tranches) =====
+                          Mixed Linear Model Regression Results
+=========================================================================================
+Model:                       MixedLM           Dependent Variable:           courbure_moy
+No. Observations:            11704             Method:                       REML        
+No. Groups:                  45                Scale:                        0.0011      
+Min. group size:             177               Log-Likelihood:               22590.0152  
+Max. group size:             342               Converged:                    Yes         
+Mean group size:             260.1                                                       
+-----------------------------------------------------------------------------------------
+                                               Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+-----------------------------------------------------------------------------------------
+Intercept                                       0.075    0.002 38.682 0.000  0.071  0.079
+C(groupe, Treatment('sain'))[T.malade]         -0.002    0.003 -0.659 0.510 -0.008  0.004
+temps_h                                         0.000    0.000  0.504 0.614 -0.001  0.001
+C(groupe, Treatment('sain'))[T.malade]:temps_h  0.001    0.001  1.418 0.156 -0.000  0.003
+Group Var                                       0.000    0.000                           
+piste Var                                       0.000    0.001                           
+=========================================================================================
+
+
+===== Part du temps immobile (11704 tranches) =====
+                          Mixed Linear Model Regression Results
+=========================================================================================
+Model:                      MixedLM           Dependent Variable:           part_immobile
+No. Observations:           11704             Method:                       REML         
+No. Groups:                 45                Scale:                        0.0431       
+Min. group size:            177               Log-Likelihood:               707.7044     
+Max. group size:            342               Converged:                    Yes          
+Mean group size:            260.1                                                        
+-----------------------------------------------------------------------------------------
+                                               Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+-----------------------------------------------------------------------------------------
+Intercept                                       0.362    0.031 11.791 0.000  0.302  0.422
+C(groupe, Treatment('sain'))[T.malade]          0.485    0.022 22.059 0.000  0.442  0.528
+temps_h                                        -0.025    0.007 -3.381 0.001 -0.039 -0.010
+C(groupe, Treatment('sain'))[T.malade]:temps_h  0.005    0.007  0.655 0.512 -0.009  0.018
+Group Var                                       0.009    0.011                           
+piste Var                                       0.027    0.008                           
+=========================================================================================
+
+
+===== Part du temps en nage rapide (11704 tranches) =====
+                          Mixed Linear Model Regression Results
+=========================================================================================
+Model:                        MixedLM           Dependent Variable:           part_rapide
+No. Observations:             11704             Method:                       REML       
+No. Groups:                   45                Scale:                        0.0109     
+Min. group size:              177               Log-Likelihood:               9083.1880  
+Max. group size:              342               Converged:                    Yes        
+Mean group size:              260.1                                                      
+-----------------------------------------------------------------------------------------
+                                               Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+-----------------------------------------------------------------------------------------
+Intercept                                       0.075    0.021  3.590 0.000  0.034  0.116
+C(groupe, Treatment('sain'))[T.malade]         -0.068    0.008 -8.426 0.000 -0.084 -0.052
+temps_h                                         0.009    0.005  1.819 0.069 -0.001  0.019
+C(groupe, Treatment('sain'))[T.malade]:temps_h -0.011    0.003 -4.418 0.000 -0.016 -0.006
+Group Var                                       0.005    0.010                           
+piste Var                                       0.003    0.002                           
+=========================================================================================
+
+
+===== Distance a la paroi (log, 11704 tranches) =====
+                          Mixed Linear Model Regression Results
+==========================================================================================
+Model:                        MixedLM            Dependent Variable:            dist_paroi
+No. Observations:             11704              Method:                        REML      
+No. Groups:                   45                 Scale:                         0.1335    
+Min. group size:              177                Log-Likelihood:                -5854.1568
+Max. group size:              342                Converged:                     Yes       
+Mean group size:              260.1                                                       
+------------------------------------------------------------------------------------------
+                                               Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+------------------------------------------------------------------------------------------
+Intercept                                       0.373    0.041   9.100 0.000  0.293  0.454
+C(groupe, Treatment('sain'))[T.malade]         -0.520    0.037 -13.985 0.000 -0.593 -0.448
+temps_h                                        -0.017    0.010  -1.711 0.087 -0.036  0.002
+C(groupe, Treatment('sain'))[T.malade]:temps_h  0.009    0.012   0.784 0.433 -0.014  0.032
+Group Var                                       0.014    0.011                            
+piste Var                                       0.078    0.013                            
+==========================================================================================
+
+
+===== Distance au plus proche voisin (log, 11704 tranches) =====
+                          Mixed Linear Model Regression Results
+==========================================================================================
+Model:                       MixedLM            Dependent Variable:            dist_voisin
+No. Observations:            11704              Method:                        REML       
+No. Groups:                  45                 Scale:                         0.1209     
+Min. group size:             177                Log-Likelihood:                -5368.0846 
+Max. group size:             342                Converged:                     Yes        
+Mean group size:             260.1                                                        
+------------------------------------------------------------------------------------------
+                                               Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+------------------------------------------------------------------------------------------
+Intercept                                      -0.369    0.029 -12.716 0.000 -0.426 -0.312
+C(groupe, Treatment('sain'))[T.malade]         -0.139    0.039  -3.563 0.000 -0.215 -0.063
+temps_h                                         0.013    0.007   1.873 0.061 -0.001  0.027
+C(groupe, Treatment('sain'))[T.malade]:temps_h  0.117    0.012   9.541 0.000  0.093  0.141
+Group Var                                       0.004    0.005                            
+piste Var                                       0.091    0.014                            
+==========================================================================================
+

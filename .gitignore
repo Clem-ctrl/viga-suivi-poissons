@@ -1,0 +1,13 @@
+# Donnees lourdes (videos, extraits, trajectoires, images annotees) : recreees par les scripts
+data/
+*.mp4
+*.video
+*.zip
+*.pt
+
+# Environnement Python et IDE
+.venv/
+venv/
+__pycache__/
+.idea/
+.ipynb_checkpoints/
